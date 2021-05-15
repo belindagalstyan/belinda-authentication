@@ -156,13 +156,13 @@ function SaveData(e) {
 
   $.ajax({
     type: 'POST',
-    url: "https://cse120-2021-api-belinda.herokuapp.com/data",
+    url: "/data",
     data: bookForm,
     cache: false,
     dataType : 'json',
     success: function (data) {
       console.log("success");
-      document.location="https://cse120-2021-api-belinda.herokuapp.com/books/thankyou.html";
+      document.location="/thankyou";
     },
     error: function (xhr) {
       console.error("Error in post", xhr);
@@ -182,7 +182,7 @@ function loadExistingData() {
 	var existingData = [];
   $.ajax({
     type: 'GET',
-    url: "https://cse120-2021-api-belinda.herokuapp.com/data",
+    url: "/data",
     data: bookForm,
     cache: false,
     dataType : 'json',

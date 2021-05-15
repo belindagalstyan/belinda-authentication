@@ -89,13 +89,13 @@ console.log(tennisForm);
 
   $.ajax({
     type: 'POST',
-    url: "/data",
+    url: "https://cse120-2021-api-belinda.herokuapp.com/data",
     data: tennisForm,
     cache: false,
     dataType : 'json',
     success: function (data) {
       console.log("success");
-      document.location="https://cse120-2021-api-belinda.herokuapp.com/tennis/thankyou.html";
+      document.location="/thankyou_tennis";
     },
     error: function (xhr) {
       console.error("Error in post", xhr);
@@ -112,10 +112,10 @@ function complete () {
 }
 
 function loadExistingData() {
-	var existingData = [];
+  var existingData = [];
   $.ajax({
     type: 'GET',
-    url: "/data",
+    url: "https://cse120-2021-api-belinda.herokuapp.com/data",
     data: tennisForm,
     cache: false,
     dataType : 'json',

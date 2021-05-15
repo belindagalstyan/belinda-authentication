@@ -93,9 +93,9 @@ function deleteData(id) {
 }
 
 function saveData() {
-	var tmp = {
-		"test": "Data"
-	}
+  var tmp = {
+    "test": "Data"
+  }
 
   $.ajax({
       type: 'POST',
@@ -229,18 +229,18 @@ function UpdateData(e) {
   updatedBook.nofpages = document.getElementById("nOfPagesForm").value;
   updatedBook.price = document.getElementById("priceForm").value;
   updatedBook.currency = document.getElementById("currencyForm").value;
-  updatedBook.language = document.getElementById("languageForm").value;	
-  updatedBook.otherlanguagevalue = document.getElementById("otherLanguageValueForm").value;	
-  updatedBook.orglanguage = document.getElementById("orgLanguageForm").value;	
-  updatedBook.otherorglanguagevalue = document.getElementById("otherOrgLanguageValueForm").value;	
-  updatedBook.edition = document.getElementById("editionForm").value;	
-  updatedBook.dimensions = document.getElementById("dimensionsForm").value;	
-  updatedBook.publisher = document.getElementById("publisherForm").value;	
-  updatedBook.date = document.getElementById("dateForm").value;	
-  updatedBook.orgdate = document.getElementById("orgDateForm").value;	
-  updatedBook.genre = document.getElementById("genreForm").value;	
-  updatedBook.agerestr = document.getElementById("ageRestrForm").value;	
-	
+  updatedBook.language = document.getElementById("languageForm").value; 
+  updatedBook.otherlanguagevalue = document.getElementById("otherLanguageValueForm").value; 
+  updatedBook.orglanguage = document.getElementById("orgLanguageForm").value; 
+  updatedBook.otherorglanguagevalue = document.getElementById("otherOrgLanguageValueForm").value; 
+  updatedBook.edition = document.getElementById("editionForm").value; 
+  updatedBook.dimensions = document.getElementById("dimensionsForm").value; 
+  updatedBook.publisher = document.getElementById("publisherForm").value; 
+  updatedBook.date = document.getElementById("dateForm").value; 
+  updatedBook.orgdate = document.getElementById("orgDateForm").value; 
+  updatedBook.genre = document.getElementById("genreForm").value; 
+  updatedBook.agerestr = document.getElementById("ageRestrForm").value; 
+  
       $.ajax({
       type: 'POST',
       url: "/data/update",
@@ -249,7 +249,7 @@ function UpdateData(e) {
       dataType : 'json',
       success: function (data) {
         console.log("success");
-	window.location.href="https://cse120-2021-api-belinda.herokuapp.com/admin/index.html";
+  window.location.href="/index";
       },
       error: function (xhr) {
         console.error("Error in post", xhr);
@@ -275,7 +275,7 @@ function UpdateTennisData(e) {
   updatedTennis.favplayer = document.getElementById("favPlayerForm").value;
   updatedTennis.competition = document.getElementById("competitionForm").value;
   updatedTennis.yes = document.getElementById("yesForm").value;
-	
+  
       $.ajax({
       type: 'POST',
       url: "/data/update",
@@ -284,7 +284,7 @@ function UpdateTennisData(e) {
       dataType : 'json',
       success: function (data) {
         console.log("success");
-	window.location.href="https://cse120-2021-api-belinda.herokuapp.com/admin/index.html";
+  window.location.href=/index";
       },
       error: function (xhr) {
         console.error("Error in post", xhr);

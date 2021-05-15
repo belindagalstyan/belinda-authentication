@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-signin-client_id" content="206134827446-akhtbn2p7klrrtqqdfj1gehssil1hiqc.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <title>Login</title>
-</head>
-<body>
-     <h1>Login page!!</h1>
-     <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+    <h1> Login page! </h1>
+  </head>
+  <style>
+      body {
+        background-image: url("http://www.allwhitebackground.com/images/7/Pixel-Aesthetic-Wallpaper-1920x1080-05619.jpg");
+        background-repeat: no-repeat; 
+        background-size: cover;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 800px;
+        padding: 30px;
+      }
+    
+      h1 {
+        color: darkblue;
+        display: block;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        font-size: 100px;
+      }
+
+      h2 {
+        font-family: Trirong;
+        background-color: rgb(252, 223, 165);
+        color: rgb(45, 33, 191);
+        text-align: center;
+        font-size: xx-large;
+      }
+
+      div {
+        text-align: center;
+        margin: auto;
+      }
+
+  </style>
+
+  <body>
+     <h2>Please login with your aua account to proceed!</h2>
+     <div style="margin: auto;" class="g-signin2" data-onsuccess="onSignIn"></div>
      <a href="#" onclick="signOut();">Sign out</a>
 
      <script>

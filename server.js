@@ -15,12 +15,14 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static('public'));
 
-app.get("/index", (req, res) => {
-	res.render("index");	
-})
 
 app.get('/', (req, res)=>{
   res.render('login');
+})
+
+app.get("/index", checkAuthenticated, (req, res) => {
+  let user = req.user;
+  res.render("index", {user});  
 })
 
 app.post('/login', (req,res)=>{
@@ -48,8 +50,14 @@ app.get("/dashboard", checkAuthenticated, (req, res) => {
 	res.render("dashboard", {user});	
 })
 
-app.get("/surveybooks", (req, res) => {
-  res.render("surveybooks"); 
+app.get("/surveybooks", checkAuthenticated, (req, res) => {
+  let user = req.user;
+  res.render("surveybooks", {user});  
+})
+
+app.get("/surveytennis", checkAuthenticated, (req, res) => {
+  let user = req.user;
+  res.render("surveytennis", {user});  
 })
 
 app.get("/protectedroute", (req, res) => {
@@ -60,8 +68,19 @@ app.get("/surveytennis", (req, res) => {
   res.render("surveytennis");	
 })
 
-app.get("/admin", (req, res) => {
-	res.render("admin");	
+app.get("/thankyou", checkAuthenticated, (req, res) => {
+  let user = req.user;
+  res.render("thankyou", {user});  
+})
+
+app.get("/admin", checkAuthenticated, (req, res) => {
+  let user = req.user;
+  res.render("admin", {user});  
+})
+
+app.get("/thankyou_tennis", checkAuthenticated, (req, res) => {
+  let user = req.user;
+  res.render("thankyou_tennis", {user});  
 })
 
 app.get('/logout', (req, res)=>{
