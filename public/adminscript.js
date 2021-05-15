@@ -54,9 +54,9 @@ function editData(id) {
             localStorage = window.localStorage;
             localStorage.setItem('editItem', JSON.stringify(item));
             if (item["project"] == "Tennis") {
-            document.location  = "editTennisForm.html"; 
+            document.location  = "/editTennisForm"; 
             } else {
-            document.location  = "editForm.html"; 
+            document.location  = "/editForm"; 
             }
         }
     })
@@ -243,13 +243,13 @@ function UpdateData(e) {
   
       $.ajax({
       type: 'POST',
-      url: "/data/update",
+      url: "https://cse120-2021-api-belinda.herokuapp.com/data/update",
       data: updatedBook,
       cache: false,
       dataType : 'json',
       success: function (data) {
         console.log("success");
-  window.location.href="/index";
+        window.location.href="/admin";
       },
       error: function (xhr) {
         console.error("Error in post", xhr);
@@ -278,13 +278,13 @@ function UpdateTennisData(e) {
   
       $.ajax({
       type: 'POST',
-      url: "/data/update",
+      url: "https://cse120-2021-api-belinda.herokuapp.com/data/update",
       data: updatedTennis,
       cache: false,
       dataType : 'json',
       success: function (data) {
         console.log("success");
-  window.location.href=/index";
+        window.location.href="/admin";
       },
       error: function (xhr) {
         console.error("Error in post", xhr);

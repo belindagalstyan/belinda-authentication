@@ -83,6 +83,16 @@ app.get("/thankyou_tennis", checkAuthenticated, (req, res) => {
   res.render("thankyou_tennis", {user});  
 })
 
+app.get("/editForm", checkAuthenticated, (req, res) => {
+  let user = req.user;
+  res.render("editForm", {user});  
+})
+
+app.get("/editTennisForm", checkAuthenticated, (req, res) => {
+  let user = req.user;
+  res.render("editTennisForm", {user});  
+})
+
 app.get('/logout', (req, res)=>{
     res.clearCookie('session-token');
     res.redirect('/login')

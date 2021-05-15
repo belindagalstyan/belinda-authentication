@@ -156,7 +156,7 @@ function SaveData(e) {
 
   $.ajax({
     type: 'POST',
-    url: "/data",
+    url: "https://cse120-2021-api-belinda.herokuapp.com/data",
     data: bookForm,
     cache: false,
     dataType : 'json',
@@ -179,10 +179,10 @@ function complete () {
 }
 
 function loadExistingData() {
-	var existingData = [];
+  var existingData = [];
   $.ajax({
     type: 'GET',
-    url: "/data",
+    url: "https://cse120-2021-api-belinda.herokuapp.com/data",
     data: bookForm,
     cache: false,
     dataType : 'json',

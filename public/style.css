@@ -71,7 +71,8 @@ div.div-form {
   padding: 15px;
   font-size: 15px;
   color: white;
-  text-align: center
+  text-align: center;
+  cursor: pointer;
 }
 
 .backButton {
