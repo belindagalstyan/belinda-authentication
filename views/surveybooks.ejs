@@ -1,1 +1,114 @@
-surveybooks.ejs
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Favorite Books</title>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <form>
+      <div>
+      <h1>Favorite Books</h1>
+      <span>* Required </span>
+      </div><br>
+      <img src="https://jerryjenkins.com/wp-content/uploads/2015/06/Library-Picture-Crop-1024x512.jpg" alt="Books"><br>
+      <div class="div-form">
+        <br><label for="fullname">Full Name<span style="color:red">*</span></label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Your answer" onblur="HandleFullnameChange()" required>
+      </div>
+      <div class="div-form">
+        <br><label for="title">Title<span style="color:red">*</span></label><br>
+        <input type="text" id="title" name="title" placeholder="Your answer" onblur="HandleTitleChange()" required>
+      </div>
+      <div class="div-form">
+        <br><label for="author">Author<span style="color:red">*</span></labe\><br>
+        <input type="text" id="author" name="author" placeholder="Your answer" onblur="HandleAuthorChange()" required>
+      </div>
+      <div class="div-form">
+        <br><label for="colour">Colour</label><br>
+        <input type="color" id="colour" name="colour" onchange="HandleColourchange()"><br>
+      </div>
+      <div class="div-form">
+        <br><label for="covertype">Cover Type<span style="color:red">*</span></label><br>
+        <input type="radio" id="paperback" name="covertype" value="paperback" onchange="HandleCovertypechange(event)" required>
+        <label for="paperback">Paperback</label><br>
+        <input type="radio" id="hardcover" name="covertype" value="hardcover" onchange="HandleCovertypechange(event)" required>
+        <label for="hardcover">Hardcover</label><br>
+        <input type="radio" name="covertype" value="other" id="other" onchange="HandleCovertypechange(event)" required>Other <input type="text" name="other_reason" id="othercovertype" onblur="HandleCovermaterialchange()" placeholder="Your answer">
+        <label for="other"></label>
+      </div>
+      <div class="div-form">
+        <br><label for="nofpages">Number of pages<span style="color:red">*</span></label><br>
+        <input type="number" id="nofpages" name="nofpages" onchange="HandleNofpageschange()" required>
+      </div>
+      <div class="div-form">
+        <br><label for="price">Price</label><br>
+        <input type="number" id="price" name="price" onchange="HandlePricechange()"><br>
+      </div>
+      <div class="div-form">
+        <br><label for="currency">Currency</label><br>
+        <input type="text" id="currency" name="currency" placeholder="Your answer" onblur="HandleCurrencyChange()">
+      </div>
+      <div class="div-form">
+        <br><label for="language">Language<span style="color:red">*</span></label><br>
+        <input type="radio" id="armenian" name="language" value="armenian" onchange="Handlelanguagechange(event)" required>
+        <label for="armenian">Armenian</label><br>
+        <input type="radio" id="english" name="language" value="english" onchange="Handlelanguagechange(event)" required>
+        <label for="english">English</label><br>
+        <input type="radio" id="russian" name="language" value="russian" onchange="Handlelanguagechange(event)" required>
+        <label for="russian">Russian</label><br>
+        <input type="radio" name="language" value="other" id="otherlang" onchange="Handlelanguagechange(event) required" placeholder="Your Answer">Other <input type="text" name="other_reason" id="otherlanguage" onblur="Handleotherlanguagechange()" placeholder="Your answer">
+        <label for="other"></label>
+      </div>
+      <div class="div-form">
+        <br><label for="orglanguage" style="margin-bottom:50px;" >Original Language</label><br>
+        <input type="radio" id="armenian" name="orglanguage" value="armenian" onchange="HandleOrglanguagechange(event)" >
+        <label for="armenian">Armenian</label><br>
+        <input type="radio" id="english" name="orglanguage" value="english" onchange="HandleOrglanguagechange(event)" >
+        <label for="english">English</label><br>
+        <input type="radio" id="russian" name="orglanguage" value="russian" onchange="HandleOrglanguagechange(event)" >
+        <label for="russian">Russian</label><br>
+        <input type="radio" name="orglanguage" value="other" onchange="HandleOrglanguagechange(event)">Other <input type="text" name="other_reason" id="otherorglanguage" onblur="HandleOrglanguagetextchange()" placeholder="Your answer">
+        <label for="other"></label>
+      </div>
+      <div class="div-form">
+        <br><label for="edition">Edition</label><br>
+        <input type="text" id="edition" name="edition" placeholder="Your answer" onblur="HandleEditionChange()">
+      </div>
+      <div class="div-form">
+        <br><label for="dimensions">Dimensions</label><br>
+        <input type="text" id="dimensions" name="dimensions" placeholder="Your answer" onblur="HandleDimensionsChange()">
+      </div>
+      <div class="div-form">
+        <br><label for="publisher">Publisher<span style="color:red">*</span></label><br>
+        <input type="text" id="publisher" name="publisher" placeholder="Your answer" onblur="HandlePublisherChange()" required>
+      </div>
+      <div class="div-form">
+        <br><label for="date">Publishing Date<span style="color:red;">*</span></label><br>
+        <input type="date" id="date" name="date" onchange="HandleDatechange()" required><br>
+      </div>
+      <div class="div-form">
+        <br><label for="orgdate">Original Publishing Date</label><br>
+        <input type="date" id="orgdate" name="orgdate" onchange="HandleOrgdatechange()"><br>
+      </div>
+      <div class="div-form">
+        <br><label for="genre">Genre<span style="color:red">*</span></label><br>
+        <input type="text" id="genre" name="genre" placeholder="Your answer" onblur="HandleGenreChange()" required>
+      </div>
+      <div class="div-form">
+        <br><label for="agerestr">Age Restriction</label><br>
+        <input type="number" id="agerestr" name="agerestr" min="1" max="200" onchange="HandleAgerestrchange()"><br>
+      </div>
+      <center>
+      <button id="Submit" type= "button" onclick="SaveData(event)">Submit</button>
+      <button class="backButton" onclick="window.location.href = '/';">Back to Dashboard</button>
+      </center>
+      </form>
+      <script src="booksScript.js">  </script>
+    </body>
+</html>

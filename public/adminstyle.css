@@ -1,0 +1,83 @@
+body{
+  font-family: Trirong;
+  text-shadow: 3px 3px 3px  rgba(27, 1, 94, 0.473);
+  background-image: url(https://www.wallpapers4u.org/wp-content/uploads/city_night_street_lights_cars_59099_1920x1080.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  color: rgb(252, 223, 165);
+ 
+}
+
+div.item {
+  min-width: 200px;
+  width: 20%;
+  height: 450px;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#tennisDataContainer div.item {
+  background-color: rgb(158, 148, 128);
+}
+
+#bookDataContainer div.item {
+  background-color: rgb(157, 97, 84);
+}
+
+#tennisDataContainer {
+  display: none;
+}
+
+#bookDataContainer {
+  display: none;
+}
+
+div.item button {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+div.item button.edit {
+	right: 70px;
+}
+
+span.item {
+	line-height: 16px;
+	font-size: 14px;
+}
+
+span.item b {
+	margin-right: 10px;
+}
+
+span.undefined {
+	color: red;
+}
+
+.backButton {
+  background-color: rgb(152,152,152);
+  border: none;
+  border-radius: 10px 10px;
+  padding: 15px;
+  font-size: 15px;
+  color: rgb(252, 223, 165);
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+h1 {
+ font-size: 30pt;
+ padding-top: 20px;
+}

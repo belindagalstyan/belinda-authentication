@@ -1,6 +1,6 @@
 {
   "name": "belinda-authentication",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is Belinda's application!",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/belindagalstyan/belinda-authentication.git"
   },
-  "keywords": ["CSE 120"],
+  "keywords": [
+    "CSE 120"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
